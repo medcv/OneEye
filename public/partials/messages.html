@@ -2,12 +2,31 @@
     <md-content>
         <md-list>
             <md-subheader class="md-no-sticky">Name List</md-subheader>
-                <div class="md-list-item-text" >
-                    <h3>{{ user_id}} </h3>
-                    <h3>{{ account}} </h3>
-                    <h3>{{ balance}} </h3>
-                    <h3>{{ message}} </h3>
-                </div>
+
+            <table>
+              <th>
+                    <a> Name </a>
+              </th>
+              <th>
+                    <a> Account Type </a>
+              </th>
+              <th>
+                    <a> User Address </a>
+              </th>
+              <th>
+                    <a> Account Balance </a>
+              </th>
+              <th>
+                    <a> Profile Image </a>
+              </th>
+                    <tr ng-repeat="user in users">
+                        <td>{{user.userName}}</td>
+                        <td>{{user.accountType}}</td>
+                        <td>{{user.address}}</td>
+                        <td>{{user.balance}}</td>
+                        <td><img ng-src="{{user.profilePics}}" alt="Description" height="50" width="50"/></td>
+                    </tr>
+            </table>
         </md-list>
     </md-content>
 </div>

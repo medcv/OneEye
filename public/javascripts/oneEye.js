@@ -6,7 +6,7 @@ angular.module('oneEye', ['ngMaterial', 'ngRoute', 'ngResource'])
         .warnPalette('red');
 })
 .config(function($routeProvider) {
-	$routeProvider.when('/messages', {
+	$routeProvider.when('/', {
 		templateUrl : 'partials/messages.html'
 	});
 })
